@@ -3,7 +3,7 @@ import React from 'react';
 import TodoItem from './TodoItem';
 import BottomNavbar from './BottomNavbar';
 
-function TodoList({ todos, setTodos, mode}) {
+function TodoList({ todos, setTodos, mode, allTodos}) {
   
   return (
     <div className="todolist">
@@ -12,7 +12,7 @@ function TodoList({ todos, setTodos, mode}) {
           <TodoItem key={index} todo={todo} index={index} setTodos={setTodos} mode={mode} todos={todos}/>
         ))}
       </ul>
-      <BottomNavbar setTodos={setTodos}  todos={todos} mode={mode} />
+      <BottomNavbar setTodos={setTodos}  todos={todos}  allTodos={allTodos} mode={mode} />
     </div>
   );
 }

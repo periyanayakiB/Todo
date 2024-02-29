@@ -1,11 +1,11 @@
 // BottomNavbar.js
 import React from 'react';
 
-function BottomNavbar({ mode, setTodos, todos }) {
+function BottomNavbar({ mode, setTodos, todos, allTodos }) {
     const filterTodos = (filter) => {
         switch (filter) {
           case 'All':
-            setTodos([...todos]); 
+            setTodos([...allTodos]); 
             break;
           case 'Completed':
             setTodos(todos.filter(todo => todo.completed));

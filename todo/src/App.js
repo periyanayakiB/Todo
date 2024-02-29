@@ -11,7 +11,7 @@ function App() {
   const [mode, setMode] = useState('light');
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
-  
+  const allTodos = [...todos]; 
 
   const toggleMode = () => {
     setMode(mode === 'light' ? 'dark' : 'light');
@@ -63,7 +63,7 @@ function App() {
             style={{ backgroundColor: mode === 'dark' ? '#283049' : '#f8f9fa', color: mode === 'dark' ? '#f8f9fa' : '#283049' }}
           />
         </div>
-        <TodoList todos={todos} setTodos={setTodos} mode={mode}  />
+        <TodoList todos={todos} setTodos={setTodos} mode={mode}  allTodos={allTodos} />
         
       </div>
     </div>
